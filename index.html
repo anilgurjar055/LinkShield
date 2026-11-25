@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+
+    <title>LinkShield | URL Safety Checker</title>
+
+    <meta name="description" content="Analyze suspicious URLs and identify potential security risks with LinkShield.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo">
+                <span class="logo-icon">🛡️</span>
+                LinkShield
+            </a>
+
+            <span class="version">BETA v1.0</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                URL SECURITY ANALYZER
+            </div>
+
+            <h1>
+                Is this link <span>safe?</span>
+            </h1>
+
+            <p>
+                Analyze suspicious URLs and identify potential
+                security threats before you click.
+            </p>
+        </section>
+
+        <section class="scanner-card">
+
+            <label for="urlInput">Enter URL to analyze</label>
+
+            <div class="input-wrapper">
+                <span class="input-icon">🔗</span>
+
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="https://example.com"
+                    autocomplete="url"
+                    spellcheck="false"
+                >
+            </div>
+
+            <button id="scanButton" class="scan-button">
+                <span>Analyze URL</span>
+                <span>→</span>
+            </button>
+
+            <p class="privacy-note">
+                🔒 Your URL is analyzed locally in your browser.
+            </p>
+
+        </section>
+
+        <section id="loading" class="loading hidden">
+            <div class="loader"></div>
+            <p>Analyzing URL security...</p>
+        </section>
+
+        <section id="resultSection" class="result-card hidden">
+
+            <div class="result-header">
+                <h2>Analysis Result</h2>
+                <span id="riskBadge" class="risk-badge"></span>
+            </div>
+
+            <div class="score-container">
+                <div class="score-circle">
+                    <span id="riskScore">0</span>
+                    <small>/100</small>
+                </div>
+
+                <div>
+                    <h3 id="resultTitle">Analysis Complete</h3>
+                    <p id="resultDescription"></p>
+                </div>
+            </div>
+
+            <div class="analyzed-url">
+                <h3>Analyzed URL</h3>
+                <p id="displayUrl"></p>
+            </div>
+
+            <div class="indicators">
+                <h3>Security Indicators</h3>
+                <div id="indicatorList"></div>
+            </div>
+
+            <p class="disclaimer">
+                This result is based on heuristic analysis.
+                It does not guarantee that a website is safe
+                or malicious.
+            </p>
+
+        </section>
+
+        <section class="history-section">
+            <div class="section-heading">
+                <h2>Recent Scans</h2>
+                <button id="clearHistory" class="clear-button">
+                    Clear History
+                </button>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <p class="empty-message">No scan history yet.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>About LinkShield</h2>
+            <p>
+                LinkShield is a URL safety analysis tool that
+                checks suspicious URL characteristics using
+                client-side security heuristics.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 LinkShield. Built for safer browsing.</p>
+        <p>Educational security project | Version 1.0</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
